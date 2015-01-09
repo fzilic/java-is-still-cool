@@ -7,7 +7,6 @@ class CollectionsExampleTest {
 
   @Test
   void listsExample() {
-
     def list = [] // new list
     assert list instanceof ArrayList // as array list by default
     assert list.isEmpty() // and empty

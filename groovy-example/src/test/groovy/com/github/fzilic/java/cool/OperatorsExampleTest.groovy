@@ -33,5 +33,17 @@ class OperatorsExampleTest {
     assert lastNames == ['Ivic', 'Horvat', 'Anic']
   }
 
+  @Test
+  void elivsExample() {
+    def person = new Person('Ivic')
+    assert !person.gender
+
+    def gender = person.gender ?: 'N/A'
+    assert gender == 'N/A'
+
+    person.gender = 'male'
+    gender = person.gender ?: 'N/A'
+    assert gender == 'male'
+  }
 
 }
