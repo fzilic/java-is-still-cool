@@ -57,45 +57,31 @@
             <section>
                 <h2>Java je "so last century"</h2>
 
-                <p class="fragment">
-                    prijatelji vam pričaju kako je Java zastarjela
-                </p>
-                <p class="fragment">
-                    kako oni programiraju u modernim, cool jezicima
-                </p>
-                <p class="fragment">
-                    kako su dinamički i funkcijski jezici budućnost
-                </p>
-                <p class="fragment">
-                    kako je objektna paradigma mrtva
-                </p>
-                <p class="fragment">
-                    kako Java ne može konkurirati drugim jezicima za Web razvoj
-                </p>
+                <p class="fragment">prijatelji vam pričaju kako je Java zastarjela</p>
+
+                <p class="fragment">kako oni programiraju u modernim, cool jezicima</p>
+
+                <p class="fragment">kako su dinamički i funkcijski jezici budućnost</p>
+
+                <p class="fragment">kako je objektna paradigma mrtva</p>
+
+                <p class="fragment">kako Java ne može konkurirati drugim jezicima za Web razvoj</p>
             </section>
 
             <section>
                 <h2>Možda i nije tako</h2>
 
-                <p>
-                    Danas vam želim pokazati kako vaši prijatelji možda nisu u pravu.
-                </p>
+                <p>Danas vam želim pokazati kako vaši prijatelji možda nisu u pravu.</p>
 
-                <p>
-                    Vaši kolege i prijatelji sigurno rade u mlađim i "modernijim" jezicima
-                </p>
+                <p>Vaši kolege i prijatelji sigurno rade u mlađim i "modernijim" jezicima</p>
 
-                <p>
-                    Nemojte se dati zavarati, jer...
-                </p>
+                <p>Nemojte se dati zavarati, jer...</p>
             </section>
 
             <section>
                 <h2>Java != Java</h2>
 
-                <p>
-                    Danas Java znači više nego nekad
-                </p>
+                <p>Danas Java znači više nego nekad</p>
 
                 <ul>
                     <li class="fragment">Java</li>
@@ -120,31 +106,252 @@
             <section>
                 <h2>Zašto Java, a ne neki od ovih?</h2>
 
-                <p>
-                    Java više ne znači samo programski jezik.
+                <p>Java više ne znači samo programski jezik.</p>
+
+                <p>Java predstavlja cijeli ekosistem.</p>
+
+                <p>Java znači stabilnost i podršku.</p>
+            </section>
+
+            <section>
+                <h2>Što sve čini Java<br>ekosistem?</h2>
+
+                <p>Ukoliko se nastavite baviti Javom, naučit ćete i sami, ali za sada samo jedno kratko nabrajanje:</p>
+
+                <p>Spring, EJB, Ant, Maven, Gradle, Ivy, Akka, Groovy, Grails, Griffon, Play...</p>
+            </section>
+
+            <section>
+                <h2>A zašto ne neki od konkurenta?</h2>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Groovy</h2>
+
+                <img src="images/groovy-logo-medium.png">
+            </section>
+
+            <section>
+                <h2>Što je to Groovy?</h2>
+
+                <p class="fragment">dinamički JVM jezik</p>
+
+                <p class="fragment">poznate Java sintakse
+                    <small>pojednostavljene</small>
                 </p>
-                <p>
-                    Java predstavlja cijeli ekosistem.
+
+                <p class="fragment">nadopunjen idejama iz Rubya, Pythona i Smalltalka</p>
+            </section>
+
+            <section>
+                <h2>Počnimo sa sintaksom</h2>
+
+                <p>Live coding time - javac, groovyc, GroovyConsole</p>
+
+                <!--@formatter:off-->
+                <pre>
+                    <code data-trim contenteditable class="java">
+public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello world");
+  }
+}
+                    </code>
+                </pre>
+                <!--@formatter:on-->
+
+                <p class="fragment">Java kod, validan je Groovy kod</p>
+
+                <p class="fragment">
+                    <small>u većini slučajeva</small>
                 </p>
-                <p>
-                    Java znači stabilnost i podršku.
+
+            </section>
+
+            <section>
+                <h2>Razlike u sintaksi</h2>
+
+                <p>nema <strong>do { .. } while ( .. )</strong> petlje</p>
+
+                <p><strong>public</strong> je svuda</p>
+
+                <p><strong>return</strong> je opcionalan</p>
+
+                <p>ne treba pisati točku zarez na kraju linije</p>
+
+                <p>zagrade su opcionalne
+                    <small>ali ih pišemo</small>
                 </p>
             </section>
 
             <section>
-                <h2>Što sve čini Java ekosistem?</h2>
+                <h2>Razlike u jeziku</h2>
 
-                <p>
-                    Ukoliko se nastavite baviti Javom, naučit ćete i sami, ali za sada samo jedno kratko nabrajanje:
-                </p>
+                <p>jednakost nije ono što je bila (više u detaljima)</p>
 
-                <p>
-                    Spring, EJB, Ant, Maven, Gradle, Ivy, Akka, Groovy, Grails, Griffon, Play...
-                </p>
+                <p>automatski generirani getteri i setteri</p>
+
+                <p>property access - preko accessor metoda</p>
+            </section>
+
+            <section>
+                <h2>Jednakost</h2>
+
+                <p>sve ovo je <strong>false</strong></p>
+                <ul>
+                    <li>null</li>
+                    <li>0</li>
+                    <li>prazna kolekcija (mapa ili lista)</li>
+                    <li>prazni iterator</li>
+                    <li>prazni string</li>
+                </ul>
+
+                <p>sve ostalo je true</p>
+            </section>
+
+            <section>
+                <h2>Novosti u jeziku</h2>
+
+                <p>closures (klozure)</p>
+
+                <p>proširenje jezika novim operatorima</p>
+
+                <p>proširenje poznatih JDK biblioteka novim metodama</p>
+            </section>
+
+            <section>
+                <h2>Novi operatori</h2>
+
+                <p>za rad s kolekcijama (liste i mape)</p>
+
+                <p>null-safe dereference <strong>?.</strong></p>
+
+                <p>novi operatori i sintaksa za regularne izraze</p>
+
+                <p>elvis <strong>?:</strong></p>
+
+                <p>spread <strong>*.</strong></p>
+
+                <p>subscript <strong>list[0]</strong></p>
+            </section>
+
+            <section>
+                <h2>Kolekcije</h2>
+
+                <p>metode za iteraciju</p>
+
+                <p>metode za filtriranje</p>
+
+                <p>metode transformacije</p>
+            </section>
+
+            <section>
+                <h2>Dinamički Groovy</h2>
+
+                <p>samo malo o ovoj temi</p>
+
+                <p>mogućnost proširivanje postojećih klasa i objekata s novim atributima i metodama</p>
+
+                <p>mogućnost zamjene ponašanja postojećih metoda</p>
+
+                <p>i to sve za vrijeme izvođenja koda</p>
             </section>
         </section>
 
+        <section>
+            <section>
+                <h2>Grails</h2>
 
+                <img src="images/grails.jpg">
+            </section>
+
+            <section>
+                <h2>Što su Grailsi?</h2>
+
+                <p class="fragment">convention over configuration web framework</p>
+
+                <p class="fragment">baziran na popularom Spring frameworku</p>
+
+                <p class="fragment">inspiriran popularnim web okružjima poput Railsa i Djanga</p>
+            </section>
+
+            <section>
+                <h2>Prednosti Grailsa</h2>
+
+                <p>poznata JVM platforma</p>
+
+                <p>iskorištavanje svih popularnih Java tehnologija</p>
+
+                <p>plugin platforma</p>
+
+                <p>jednostavnije i brže kodiranje</p>
+            </section>
+
+            <section>
+                <h2>U pozadini Grailsa</h2>
+
+                <p>Spring Web MVC framework</p>
+
+                <p>Hibernate</p>
+
+                <p>Tomcat</p>
+            </section>
+
+            <section>
+                <h2>Struktura Grails<br>aplikacije</h2>
+
+                <pre>
+                    <!--@formatter:off-->
+                    <code data-tri contenteditable class="shebang">
+grails-example
+|-- grails-app
+|   |-- assets
+|   |-- conf
+|   |-- controllers
+|   |-- domain
+|   |-- i18n
+|   |-- migrations
+|   |-- services
+|   |-- taglib
+|   |-- utils
+|   `-- views
+|-- lib
+|-- scripts
+|-- src
+|   |-- groovy
+|   `-- java
+|-- test
+|   |-- integration
+|   `-- unit
+`-- web-app
+    |-- META-INF
+    |-- WEB-INF
+    |-- css
+    |-- images
+    `-- js
+                    </code>
+                    <!--@formatter:on-->
+                </pre>
+            </section>
+
+            <section>
+                <h2>Demo time...</h2>
+
+                <!--@formatter:off-->
+                <pre>
+                    <code data-trim contenteditable class="shebang">
+grails create-app live-coding
+cd live-coding
+grails run-app
+                    </code>
+                </pre>
+                <!--@formatter:on-->
+
+                <p>od sada na dalje - kodiramo</p>
+            </section>
+        </section>
     </div>
 
 </div>
